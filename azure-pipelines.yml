@@ -55,7 +55,7 @@ stages:
     condition: and(succeeded(), not(startsWith(variables['Build.SourceBranch'], 'refs/pull/')))
     displayName: Deploy
     pool:
-      vmImage: $(vmImageName)
+      name: Default
     environment: 'phamleanh05AzDEVAKS-7798.default'
     strategy:
       runOnce:
