@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: phamleanhazdevaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: phamleanhazdevaks
+  template:
+    metadata:
+      labels:
+        app: phamleanhazdevaks 
+    spec:
+      containers:
+        - name: phamleanhazdevaks 
+          image: azdevopacr.azurecr.io/phamleanhazdevaks
+          ports:
+          - containerPort: 8080
